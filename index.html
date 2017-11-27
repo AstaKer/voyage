@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Voyage</title>
+      <meta name="description" content="Voyage - kelionių agentūra">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:200,400,600,800" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <div class="section">
+      <div class="container" id="bg-1">
+      <div class="navbar-header header-social">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="socialhead">
+          <ul class="nav navbar-nav hidden-md hidden-lg hidden-xl hidden-sm pirmasnav">
+            <li><a href="https://www.facebook.com/asta.woodstock" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"> </i></a></li>
+            <li><a href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"> </i> </a></li>
+            <li><a href="https://www.tumblr.com/" target="_blank"> <i class="fa fa-tumblr" aria-hidden="true"> </i> </a></li>
+            <li><a href="https://www.pinterest.com/" target="_blank"> <i class="fa fa-pinterest" aria-hidden="true"></i> </a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav navbar-left pirmasnav pirmasnavresponsive">
+              <li> <button onclick="document.getElementById('a_log').style.display='block'" style="width:auto;"><i class="fa fa-user-o" aria-hidden="true"> </i> Agent login</button>
+              <div id="a_log" class="modal">
+                <form class="modal-content animate" id="alogin">
+                  <div class="container" id="customer-container">
+                    <span onclick="document.getElementById('a_log').style.display='none'" class="close" title="Close">&times;</span>
+                    <label><b>Username</b></label>
+                    <input id="customer-input" type="text" placeholder="Enter Username" name="username" required/>
+                    <label><b>Password</b></label>
+                    <input id="customer-input1" type="password" placeholder="Enter Password" name="password" required/>
+                    <button class="a-login-button" type="submit" name="submit">Login</button><br>
+                    <input type="checkbox" checked="checked"/> Remember me
+                  </div>
+                  <div class="container-fluid" id="customer-container1"  style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('a_log').style.display='none'" class="cancelbtn1">Cancel</button>
+                    <span class="password">Forgot <a href="#" style="color:#1dd2af">password?</a></span>
+                  </div>
+                </form>
+              </div>
+              </li>
+              <li> <button onclick="document.getElementById('idlog').style.display='block'" style="width:auto;"><i class="fa fa-user-o" aria-hidden="true"> </i> Customer login</button>
+              <div id="idlog" class="modal">
+                <form class="modal-content animate" id="clogin">
+                  <div class="container" id="customer-container2">
+                    <span onclick="document.getElementById('idlog').style.display='none'" class="close" title="Close">&times;</span>
+                    <label><b>Username</b></label>
+                    <input id="customer-input2" type="text" placeholder="Enter Username" name="username" required/>
+                    <label><b>Password</b></label>
+                    <input id="customer-input3" type="password" placeholder="Enter Password" name="password" required/>
+                    <button class="a-login-button" type="submit" name="submit">Login</button><br>
+                    <input type="checkbox" checked="checked"/> Remember me
+                  </div>
+                  <div class="container-fluid" id="customer-container3"  style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('idlog').style.display='none'" class="cancelbtn1">Cancel</button>
+                    <span class="password">Forgot <a href="#" style="color:#1dd2af">password?</a></span>
+                  </div>
+                </form>
+              </div> </li>
+              <li> <button onclick="document.getElementById('register').style.display='block'" style="width:auto;"> <i class="fa fa-file-o" aria-hidden="true"> </i> Not a member? Register </button>
+                <div id="register" class="modal">
+                  <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">×</span>
+                  <form class="modal-content animate" action="index.php" method="post" id="newregister">
+                    <div class="container" id="signup-container">
+                      <span onclick="document.getElementById('idlog').style.display='none'" class="close" title="Close">&times;</span>
+                      <label> <b> Email </b> </label>
+                      <input id="register-input" type="text" placeholder="Enter Email" name="email" required/>
+                      <label><b>Password</b></label>
+                      <input id="register-input1" type="password" placeholder="Enter Password" name="password" required/>
+                      <label><b>Repeat Password</b></label>
+                      <input id="register-input2" type="password" placeholder="Repeat Password" name="password-repeat" required/>
+                      <input type="checkbox" checked="checked"/> Remember me
+                      <p>By creating an account you agree to our <a href="#" style="color:#1dd2af">Terms & Privacy</a> </p>
+                    <div class="clearfix">
+                      <button  type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+                      <button type="submit" name="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              </li>
+              <li> <a href="tel:+37068021074" id="call"> Call us now: +370 680 21074 </a> </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right pirmasnav hidden-xs hidden-sm">
+              <li><a href="https://www.facebook.com/asta.woodstock" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"> </i></a></li>
+              <li><a href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"> </i> </a></li>
+              <li><a href="https://www.tumblr.com/" target="_blank"> <i class="fa fa-tumblr" aria-hidden="true"> </i> </a></li>
+              <li><a href="https://www.pinterest.com/" target="_blank"> <i class="fa fa-pinterest" aria-hidden="true"></i> </a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+      <div class= "container" id="bg-2">
+        <nav class="navbar" id="nav-container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <div class="navbar-left logo">
+            <a class="navbar-brand" href="http://codingschoolprojektai.lt/tmp/abootcamp/asta-kersyte/html/"><img src="images/voyage-logo.png" alt="Voyage logo"/> </a>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav antrasnav">
+            <li class="active"> <a href="home.html">HOME </a> </li>
+            <li class="active"> <a href="destinations.html">DESTINATIONS </a> </li>
+            <li class="active"> <a href="cruises.html">CRUISES </a> </li>
+            <li class="active"> <a href="specials.html">SPECIALS </a> </li>
+            <li class="active"> <a href="holidays.html">HOLIDAYS </a> </li>
+            <li class="active"> <a href="blog.html">BLOG </a> </li>
+            <li class="active"> <a href="search.html"><i class="fa fa-search" aria-hidden="true"></i> </a> </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <main>
+      <div class="banner">
+        <div class="overlay">
+          <div class="banner-container container">
+            <div class="banner-content">
+              <h1>TO TRAVEL IS TO LIVE</h1>
+              <p>You Don't Need Magic to Dissapear. All you need is a destination! </p>
+              <button class="btn-show btn-lg" onclick="window.location='showonthemap.html';">SHOW ON THE MAP</button>
+              <button class="btn-info btn-lg" onclick="window.location='moreinfo.html';">More info </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="bg-4">
+        <div class="row nopadding text-center" style="background-color:#2c3e50">
+          <form class="form-inline">
+            <div class="form-group find col-lg-offset-2 col-lg-1 col-sm-12">
+              <p>FIND YOUR <font color="#fff" size="4px"> HOLIDAYS </font> </p>
+            </div>
+            <div class="form-group col-lg-3">
+              <label class="control-label" id="where" for="where">Where</label>
+              <div class="input-group date">
+                <input type="text" class="form-control"  list="countries" placeholder="destination" />
+                  <datalist id="countries">
+                    <option value ="New York">
+                    <option value ="Rome">
+                    <option value ="Paris">
+                    <option value = "Dubai">
+                    <option value = "El Nido">
+                    <option value = "Barselona">
+                  </datalist>
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe form-control-feedback" aria-hidden="true" style="color:#a4a4a4" > </i> </span>
+              </div>
+            </div>
+            <div class=" form-group date col-lg-3">
+              <label class="control-label" id="when" for="when">When </label>
+            <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+              <input class="form-control" type="text"  name="date" placeholder="select date"/>
+              <span class="input-group-addon"> <i class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true" style="color:#a4a4a4"> </i> </span>
+            </div>
+            </div>
+            <div class="form-group search col-lg-1">
+              <button id="search" type="submit" class="btn btn-primary btn-md" style="background-color:#1dd2af">Search </button>
+            </div>
+            </form>
+          </div>
+        </div>
+
+      <div class="container-fluid" id="bg-5">
+        <div class="offers text-center">
+          <h2> SPECIAL OFFERS </h2>
+          <p class="best">Best 2017 packages where people love to stay </p>
+        </div>
+        <div class="row no-gutter text-center display-flex">
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+            <img class="img-responsive" src="images/new-york.jpg" alt="New York"/>
+            <button id="thumbnailbutton"> <i class="glyphicon glyphicon-chevron-down"> </i> </button>
+            <h5>Spectacular <font color="#1dd2af" size="3px"> New York! </font></h5>
+            <p>New destination!</p>
+            <div class ="toggletext">
+            <i class="glyphicon glyphicon-tag"> </i> $765
+            <br>
+            <i class="glyphicon glyphicon-warning-sign"> </i> 8days/7nights
+            <br>
+            <button type="button" class="btn btn-xs" onclick="window.location='buy.html'">BUY NOW</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+          <img class="img-responsive" src="images/rome.jpg" alt="Rome"/>
+          <button id="thumbnailbutton1"> <i class="glyphicon glyphicon-chevron-down"></i></button>
+            <h5>Spectacular <font color="#1dd2af" size="3px"> Rome! </font> </h5>
+            <p>New destination!</p>
+            <div class ="toggletext1">
+            <i class="glyphicon glyphicon-tag"></i> $765
+            <br>
+            <i class="glyphicon glyphicon-warning-sign"></i> 8days/7nights
+            <br>
+            <button type="button" class="btn btn-xs" onclick="window.location='buy.html'">BUY NOW</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+          <img class="img-responsive" src="images/paris.jpg" alt="Paris"/>
+          <button id="thumbnailbutton2"> <i class="glyphicon glyphicon-chevron-down"></i></button>
+          <h5>Spectacular <font color="#1dd2af" size="3px"> Paris! </font></h5>
+          <p>New destination!</p>
+          <div class ="toggletext2">
+          <i class="glyphicon glyphicon-tag"> </i> $765
+          <br>
+          <i class="glyphicon glyphicon-warning-sign"> </i> 8days/7nights
+          <br>
+          <button type="button" class="btn btn-xs" onclick="window.location='buy.html'">BUY NOW</button>
+          </div>
+        </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+          <img class="img-responsive" src="images/dubai1.jpg" alt="Dubai"/>
+          <button id="thumbnailbutton3"> <i class="glyphicon glyphicon-chevron-down"></i></button>
+          <h5>Spectacular <font color="#1dd2af" size="3px"> Dubai! </font></h5>
+          <p>New destination!</p>
+          <div class ="toggletext3">
+          <i class="glyphicon glyphicon-tag"></i> $765
+          <br>
+          <i class="glyphicon glyphicon-warning-sign">  </i> 8days/7nights
+          <br>
+          <button type="button" class="btn btn-xs" onclick="window.location='buy.html'">BUY NOW</button>
+          </div>
+        </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+          <img class="img-responsive" src="images/philipines.jpg" alt="El Nido"/>
+          <button id="thumbnailbutton4"> <i class="glyphicon glyphicon-chevron-down"></i></button>
+          <h5>Spectacular <font color="#1dd2af" size="3px"> El Nido! </font></h5>
+          <p>New destination!</p>
+          <div class ="toggletext4">
+          <i class="glyphicon glyphicon-tag"> </i> $765
+          <br>
+          <i class="glyphicon glyphicon-warning-sign"> </i> 8days/7nights
+          <br>
+          <button type="button" class="btn btn-xs" onclick="window.location='buy.html'">BUY NOW</button>
+          </div>
+        </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+          <img class="img-responsive" src="images/barselona.jpg" alt="Barselona"/>
+          <button id="thumbnailbutton5"> <i class="glyphicon glyphicon-chevron-down"></i></button>
+          <h5>Spectacular <font color="#1dd2af" size="3px"> Barselona! </font></h5>
+          <p>New destination!</p>
+          <div class ="toggletext5">
+          <i class="glyphicon glyphicon-tag"></i> $765
+          <br>
+          <i class="glyphicon glyphicon-warning-sign"> </i> 8days/7nights
+          <br>
+          <button type="button" class="btn btn-xs" onclick="window.location='buy.html'">BUY NOW</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="section">-->
+      <div class="container-fluid text-center" id="bg-6">
+        <div class="holidays-type">
+          <h3 class="holidays">HOLIDAYS TYPE</h3>
+          <p>Get explore your dream to travel the world!</p>
+        </div>
+        <div class="row no-gutter travel-types-png">
+          <div class="col-md-3 col-xs-4 col-sm-4">
+            <a href="cruises.html" target="_blank"> <img src="images/cruise.png" alt="Cruise" class="img-responsive"/></a>
+            <p>Cruises</p>
+          </div>
+          <div class="col-md-3 col-xs-4 col-sm-4">
+            <a href="citybreaks.html" target="_blank"><img src="images/city.png" alt="City breaks" class="img-responsive"/></a>
+            <p>City breaks</p>
+          </div>
+          <div class="col-md-3 col-xs-4 col-sm-4">
+            <a href="honeymoon.html" target="_blank"><img src="images/honeymoon.png" alt="Honeymoon" class="img-responsive"/></a>
+            <p class="honeymoon">Honeymoon</p>
+          </div>
+          <div class="col-md-3 col-xs-4 col-sm-4">
+            <a href="adventures.html" target="_blank"><img src="images/adventure.png" alt="Adventures" class="img-responsive"/></a>
+            <p>Adventures</p>
+          </div>
+          <div class="col-md-3 col-xs-4 col-sm-4">
+            <a href="safari.html" target="_blank"><img src="images/safari.png" alt="Safari" class="img-responsive"/> </a>
+            <p>Safari</p>
+          </div>
+          <div class="col-md-3 col-xs-4 col-sm-4">
+            <a href="beach.html" target="_blank"><img src="images/beach.png" alt="Beach" class="img-responsive"/></a>
+            <p>Beach</p>
+          </div>
+        </div>
+      </div>
+  <!--</div>-->
+
+    <div class ="container-fluid text-center hidden-xs hidden-sm" id="bg-7" >
+      <div class="happy-clients">
+        <h3>HAPPY CLIENTS</h3>
+        <p>What customer say about us and why lover our services!</p>
+      </div>
+      <div class="carousel-reviews">
+        <div class="row text-left">
+            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="col-md-4 ">
+                        <div class="blurb">
+                          <p>Our travel agency delivered one of the most amazing, relaxing, seamless vacation for a family of 4, including 2 pre-teens.  The owner and his wife have established a superior team in Italy.  The hotels/ B&Bs were straight out of movie sets, the people who guided us were engaged and thoughtful. <br>Asta <br> Lithuania</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="blurb">
+                          <p>Our travel agency delivered one of the most amazing, relaxing, seamless vacation for a family of 4, including 2 pre-teens.  The owner and his wife have established a superior team in Italy.  The hotels/ B&Bs were straight out of movie sets, the people who guided us were engaged and thoughtful. <br>Asta <br> Lithuania</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="blurb">
+                          <p>Our travel agency delivered one of the most amazing, relaxing, seamless vacation for a family of 4, including 2 pre-teens.  The owner and his wife have established a superior team in Italy.  The hotels/ B&Bs were straight out of movie sets, the people who guided us were engaged and thoughtful. <br>Asta <br> Lithuania</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-4 ">
+                        <div class="blurb">
+                          <p>Our travel agency delivered one of the most amazing, relaxing, seamless vacation for a family of 4, including 2 pre-teens.  The owner and his wife have established a superior team in Italy.  The hotels/ B&Bs were straight out of movie sets, the people who guided us were engaged and thoughtful. <br>Asta <br> Lithuania</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="blurb">
+                          <p>Our travel agency delivered one of the most amazing, relaxing, seamless vacation for a family of 4, including 2 pre-teens.  The owner and his wife have established a superior team in Italy.  The hotels/ B&Bs were straight out of movie sets, the people who guided us were engaged and thoughtful. <br>Asta <br> Lithuania</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="blurb">
+                          <p>Our travel agency delivered one of the most amazing, relaxing, seamless vacation for a family of 4, including 2 pre-teens.  The owner and his wife have established a superior team in Italy.  The hotels/ B&Bs were straight out of movie sets, the people who guided us were engaged and thoughtful. <br>Asta <br> Lithuania</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="bg-8">
+      <div class="row bg-row">
+        <div class="col-md-offset-2 col-md-2 col-xs-12 col-sm-12" >
+          <h3 class="spalva">Newsletter</h3>
+          <p>Subscribe our weekly Newsletter and stay tunned!</p>
+        <form class="form-inline formresponsive" action="index.php" method="post" id="email" >
+          <div class="form-group">
+            <input type="email" name="newsletteremail" class="form-control input-sm" placeholder="Subscribe" style="width:150px"/>
+          </div>
+          <div class="form-group">
+            <button type="submit" name="submit" id="email-submit" class="btn btn-primary btn-sm" style="background-color:#1dd2af">Go </button>
+          </div>
+        </form>
+          </div>
+          <div class="col-md-2">
+            <h3 class="spalva">Blog</h3>
+            <article class="blog">
+              <img src="images/snowboarding.jpg" alt="snowboarding" width="40" height="40"/>&nbsp;
+              <p>Snowboarding is fun
+              <br>October 23, 2017 15:12 </p>
+            </article>
+            <article class="blog">
+              <img src="images/snowboarding.jpg" alt="snowboarding" width="40" height="40"/>&nbsp;
+              <p> Snowboarding is fun
+              <br>October 23, 2017 15:12 </p>
+            </article>
+          </div>
+        <div class="col-md-2">
+          <h3 class="spalva">Tags</h3>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Agent login </button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Customer login </button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Not a member? </button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Contact </button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">New horizons </button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Landscape</button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Tags</button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Nice </button>
+          <button type="submit" class="btn btn-primary btn-sm" style="background-color:transparent; border:1px solid #fff; color:#969fa8">Paris</button>
+        </div>
+        <div class="col-md-2" id="contact-us">
+          <h3 class="spalva">Contact us</h3>
+          <a style="color:#969fa8" href="https://www.google.lt/maps/place/Ulon%C5%B3+g.+5,+Vilnius+08240/@54.709892,25.2901282,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd96ae1dedd637:0x73978617430c730c!8m2!3d54.709892!4d25.2923169?dcr=0"> Ulonų g. 5, Vilnius </a>
+          <br>
+          <a style="color:#969fa8" href="email:asta.kersyte@yahoo.com"> asta.kersyte@yahoo.com </a>
+          <br>
+          <div class="social-buttons">
+          <a style="color:#fff" href="https://www.facebook.com/asta.woodstock" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"> </i></a>
+          <a style="color:#fff" href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"> </i> </a>
+          <a style="color:#fff" href="https://www.tumblr.com/" target="_blank"> <i class="fa fa-tumblr" aria-hidden="true"> </i> </a>
+          <a style="color:#fff" href="https://www.pinterest.com/" target="_blank"> <i class="fa fa-pinterest" aria-hidden="true"></i> </a>
+        </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <footer>
+      <div class="container-fluid text-center" id="bg-9">
+        <div class="navigacija">
+        <a href="home.html" style="color:#1dd2af"> Home </a> &#58;&#58;
+        <a href="destinations.html"> Destinations </a> &#58;&#58;
+        <a href="cruises.html">Cruises </a> &#58;&#58;
+        <a href="specials.html">Specials </a> &#58;&#58;
+        <a href="holidays.html">Holidays </a> &#58;&#58;
+        <a href="blog.html"> Blog</a> &#58;&#58;
+        <a href="contactus.html">Contact us </a>
+      </div>
+      <div class="copyright">
+        <small class="copyright">&copy; 2017 Voyage All rights reserved</small>
+      </div>
+    </div>
+
+      <button title="Back to top" class="scroll">
+      <span class="arrow-up glyphicon glyphicon-chevron-up"></span> </button>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"> </script>
+
+    </body>
+  </html>
